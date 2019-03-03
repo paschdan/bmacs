@@ -79,6 +79,7 @@
     - [[#dtrt-indent-mode][dtrt-indent-mode]]
   - [[#git][Git]]
     - [[#magit][Magit]]
+    - [[#git-commit-mode][git-commit-mode]]
     - [[#gitconfig-mode][gitconfig-mode]]
     - [[#gitignore-mode][gitignore-mode]]
     - [[#git-gutter-fringe][git-gutter-fringe]]
@@ -3043,6 +3044,21 @@ Automatically detect and set indentation in programming modes
   (map! :map magit-mode-map
         "SPC" nil))
 #+END_SRC
+
+*** git-commit-mode
+
+#+BEGIN_SRC emacs-lisp
+(use-package git-commit
+  :ensure nil
+  :preface
+  (defun me/git-commit-set-fill-column ()
+    (setq-local comment-auto-fill-only-comments nil)
+    (setq fill-column 72))
+  :config
+  (advice-add 'git-commit-turn-on-auto-fill :before #'me/git-commit-set-fill-column))
+#+END_SRC
+
+#+RESULTS:
 
 *** gitconfig-mode
 
