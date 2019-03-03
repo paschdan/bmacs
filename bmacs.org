@@ -8169,7 +8169,7 @@ session)."
    "u"       #'winner-undo
    "C-u"     #'winner-undo
    "C-r"     #'winner-redo
-   "o"       #'doom/window-zoom
+   "o"       #'bmacs/window-zoom
    ;; Delete window
    "C-C"     #'ace-delete-window)
 
