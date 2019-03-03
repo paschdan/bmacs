@@ -186,9 +186,9 @@ This is Bryan Gilbert's personal Emacs configuration.
 ** Personal Information
 
 #+BEGIN_SRC emacs-lisp
-(setq user-full-name "Bryan Gilbert"
-      user-mail-address "bryan@bryan.sh"
-      auth-sources (list (expand-file-name "~/.authinfo.gpg")))
+(setq user-full-name "Daniel Paschke"
+      user-mail-address "paschdan@gmail.com"
+      auth-sources (list (expand-file-name "~/.authinfo")))
 #+END_SRC
 
 ** Variables
